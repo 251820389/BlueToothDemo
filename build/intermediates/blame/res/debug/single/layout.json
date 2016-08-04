@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\layout\\device_list.xml",
+        "source": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\src\\main\\res\\layout\\device_list.xml"
+    },
+    {
+        "merged": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\layout\\device_list.xml",
+        "source": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\src\\main\\res\\layout\\device_list.xml"
+    },
+    {
+        "merged": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\layout\\devicelist_fragment.xml",
+        "source": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\src\\main\\res\\layout\\devicelist_fragment.xml"
+    },
+    {
+        "merged": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\layout\\content_fragment.xml",
+        "source": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\src\\main\\res\\layout\\content_fragment.xml"
+    },
+    {
+        "merged": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\layout\\content_fragment.xml",
+        "source": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\src\\main\\res\\layout\\content_fragment.xml"
+    },
+    {
+        "merged": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\layout\\devicelist_fragment.xml",
+        "source": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\src\\main\\res\\layout\\devicelist_fragment.xml"
+    },
+    {
+        "merged": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\layout\\gatt_layout.xml",
+        "source": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\src\\main\\res\\layout\\gatt_layout.xml"
+    },
+    {
+        "merged": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\layout\\gatt_layout.xml",
+        "source": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\src\\main\\res\\layout\\gatt_layout.xml"
+    }
+]

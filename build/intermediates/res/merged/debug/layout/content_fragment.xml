@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@android:color/darker_gray"
+    >
+  <LinearLayout android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="2dp">
+     <Button 
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back"
+        />
+          <Button 
+        android:id="@+id/conBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        android:layout_marginLeft="20dp"
+        />
+        </LinearLayout>
+     <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="5dp">
+    <TextView 
+        android:id="@+id/devName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        />
+    <TextView 
+        android:id="@+id/devAdress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="1dp"
+        android:background="#CEC9E7"
+        />
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tag="data show"
+        >
+     <FrameLayout 
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp"
+                  android:id="@+id/classicZone"
+                  android:visibility="gone"
+                  >
+
+         <LinearLayout android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  >
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="通信"
+        />
+    
+    <Spinner 
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:entries="@array/array_setting"
+        android:layout_height="wrap_content"/>
+    
+    <Button 
+        android:id="@+id/sendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="send"
+       
+        />
+    <TextView 
+        android:layout_marginTop="10dp"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="send Data:"
+        />
+    <TextView 
+        android:id="@+id/sendData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_orange_dark"
+        />
+    
+    <TextView 
+        android:layout_marginTop="10dp"      
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Recieve Data:"
+        />
+    <TextView 
+        android:id="@+id/dataNumTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_orange_dark"
+        
+        />
+    <TextView 
+        android:id="@+id/speedTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_blue_dark"
+        
+        />
+
+    <TextView 
+        android:id="@+id/dataTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+		android:textSize="14sp"        
+		android:text="data show"
+        />
+        
+        
+        </LinearLayout>
+        
+    </FrameLayout>
+    </ScrollView>
+        <ExpandableListView android:id="@+id/gatt_services_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+</LinearLayout>

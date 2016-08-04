@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NK-BlueTooth</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="unknown_service">unkunowService</string>
+    <string name="unknown_characteristic">unkunowCharacteristic</string>
+    
+    
+	<string-array name="array_setting">
+	    <item>握手</item>
+	    <item>营运商名设置</item>
+	    <item>商户号设置</item>
+	    <item>终端号设置</item>
+	    <item>营运商名读取</item>
+	    <item>商户号读取</item>
+	    <item>终端号读取</item>
+	    <item>设置终端SN号</item>
+	    <item>获取随机数</item>
+	    <item>检测接触式IC卡是否存在</item>
+	    <item>设置接触式IC卡电源</item>
+	    <item>发送IC卡命令包</item>
+	    <item>密钥注入</item>
+	    <item>密钥使用</item>
+	    <item>设置调试开关</item>
+	    <item>系统更新</item>
+	    <item>下载通讯密钥</item>
+	</string-array>
+</resources>

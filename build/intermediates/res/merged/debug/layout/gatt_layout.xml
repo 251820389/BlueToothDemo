@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/propTV"
+        android:textSize="16sp"
+        />
+	<TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/uuidTV"
+        android:textSize="16sp"
+        />
+	<Button 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/readPropBTN"
+	    android:visibility="gone"
+	    android:text="readProp"
+	    />
+	<Button 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/opBTN"
+	    android:text="operate"
+	    />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data:"
+        android:textSize="18sp"
+        />
+    <LinearLayout 
+        android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical" 
+		android:id="@+id/revLayout" 
+		android:visibility="gone"      
+        >
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/dataMountTV"
+        />
+     <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:id="@+id/dataSpeedTV"
+        />
+	<ScrollView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    >
+
+	<TextView 
+	    android:id="@+id/dataTV"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:textSize="16sp"
+	    />
+	</ScrollView>
+	</LinearLayout>
+	
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/sendLayout"
+        android:visibility="gone"
+        >
+     <EditText 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="16sp"
+         android:hint="send Data Length"
+         android:inputType="number"
+         android:id="@+id/sendET"
+         />
+      <EditText 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="16sp"
+         android:hint="send Times"
+         android:inputType="number"
+         android:id="@+id/sendTimesET"
+         />
+        
+    </LinearLayout>
+    
+</LinearLayout>
