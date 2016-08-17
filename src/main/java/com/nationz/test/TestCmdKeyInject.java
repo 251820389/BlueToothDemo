@@ -22,10 +22,12 @@ public class TestCmdKeyInject extends TestBase {
     public void init(ArrayList arrList) {
         this.keyId = (int) arrList.get(0);
         this.decryption_algorithm = (int) arrList.get(1);
-        this.decodeKeyId = (int) arrList.get(2);
-        this.keyData = arrList.get(3).toString();
-        this.keyLrcAlgorithm = (int) arrList.get(4);
-        this.keyLrcData = arrList.get(5).toString();
+        if (decryption_algorithm != 12) {
+            this.decodeKeyId = (int) arrList.get(2);
+            this.keyData = arrList.get(3).toString();
+            this.keyLrcAlgorithm = (int) arrList.get(4);
+            this.keyLrcData = arrList.get(5).toString();
+        }
         cmd = 0x0E;
     }
 
@@ -53,29 +55,30 @@ public class TestCmdKeyInject extends TestBase {
         sendData[position] = cmd;
         position += 1;
 
-        sendData[position] = (byte)keyId;
+        sendData[position] = (byte) keyId;
         position += 1;
 
-        sendData[position] = (byte)decryption_algorithm;
+        sendData[position] = (byte) decryption_algorithm;
         position += 1;
+        if (decryption_algorithm != 12) {
+            sendData[position] = (byte) decodeKeyId;
+            position += 1;
 
-        sendData[position] = (byte)decodeKeyId;
-        position += 1;
+            sendData[position] = (byte) keyDataLen;
+            position += 1;
 
-        sendData[position] = (byte) keyDataLen;
-        position += 1;
+            System.arraycopy(keyDataByte, 0, sendData, position, keyDataLen);
+            position += keyDataLen;
 
-        System.arraycopy(keyDataByte,0,sendData,position, keyDataLen);
-        position +=  keyDataLen;
+            sendData[position] = (byte) keyLrcDataLen;
+            position += 1;
 
-        sendData[position] = (byte)keyLrcDataLen;
-        position += 1;
+            sendData[position] = (byte) keyLrcAlgorithm;
+            position += 1;
 
-        sendData[position] = (byte)keyLrcAlgorithm;
-        position += 1;
-
-        System.arraycopy(keyLrcDataByte,0,sendData,position,keyLrcDataLen);
-        position += keyLrcDataLen;
+            System.arraycopy(keyLrcDataByte, 0, sendData, position, keyLrcDataLen);
+            position += keyLrcDataLen;
+        }
 
         byte[] lrc = TestUtil.getInstance().getLrc(sendData);
         System.arraycopy(lrc, 0, sendData, position, 8);
@@ -117,13 +120,13 @@ public class TestCmdKeyInject extends TestBase {
             TestUtil.getInstance().codeRsp(result[i]);
         }
         i += 1;
-        if(rspCode){
+        if (rspCode) {
             int keyLrcDataLens = result[i];
             bean.setKeyLrcCipherLens((byte) keyLrcDataLens);
             byte[] keyLrcData = new byte[i];
             i += 1;
 
-            System.arraycopy(result,i,keyLrcData,0,keyLrcDataLens);
+            System.arraycopy(result, i, keyLrcData, 0, keyLrcDataLens);
             bean.setKeyLrcCipherData(keyLrcData);
             i += keyLrcDataLens;
         }

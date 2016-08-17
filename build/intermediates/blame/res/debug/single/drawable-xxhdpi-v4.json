@@ -2,9 +2,5 @@
     {
         "merged": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
         "source": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
-        "source": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
     }
 ]

@@ -1,13 +1,5 @@
 [
     {
-        "merged": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\src\\main\\res\\menu\\main.xml"
-    },
-    {
-        "merged": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\menu\\gatt_services.xml",
-        "source": "E:\\android-studio_workspace\\LiuhePay\\BlueToothDemo\\src\\main\\res\\menu\\gatt_services.xml"
-    },
-    {
         "merged": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
         "source": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\src\\main\\res\\menu\\main.xml"
     },
