@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="5000dp"
+              android:padding="10dp"
+              android:orientation="vertical">
+
+    <com.nationz.ui.PasswordInputView
+        android:id="@+id/pwdInputView"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="25dp"
+        android:cursorVisible="false"
+        android:inputType="number"
+        android:maxLength="6"
+        app:pivBorderColor="@color/dialog_btn"
+        app:pivBorderRadius="10dp"
+        app:pivBorderWidth="10dp"
+        app:pivPasswordColor="@color/dialog_btn"
+        app:pivPasswordLength="6"
+        app:pivPasswordWidth="10dp"/>
+
+    <Button
+        android:id="@+id/pwd_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordInputView"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:background="@color/dialog_btn"
+        android:text="@string/submit"/>
+</LinearLayout>

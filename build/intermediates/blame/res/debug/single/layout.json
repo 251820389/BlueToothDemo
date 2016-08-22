@@ -16,7 +16,15 @@
         "source": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\src\\main\\res\\layout\\devicelist_fragment.xml"
     },
     {
+        "merged": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\layout\\test_layout.xml",
+        "source": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\src\\main\\res\\layout\\test_layout.xml"
+    },
+    {
         "merged": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\layout\\gatt_layout.xml",
         "source": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\src\\main\\res\\layout\\gatt_layout.xml"
+    },
+    {
+        "merged": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\build\\intermediates\\res\\merged\\debug\\layout\\pwd_input_layout.xml",
+        "source": "E:\\android-studio_workspace\\WorkSpace\\BlueToothDemo\\src\\main\\res\\layout\\pwd_input_layout.xml"
     }
 ]
