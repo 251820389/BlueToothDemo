@@ -11,13 +11,11 @@ public class TestCmdSetArgs extends TestBase{
 
 	private String dataStr;
 	private int type;
-	
-	@Override
-	public void init(ArrayList arrList) {
-		this.dataStr = arrList.get(0).toString();
-		this.type = (int)arrList.get(1);
-		cmd = 0x02;
 
+	public TestCmdSetArgs(String dataStr,int type){
+		this.dataStr = dataStr;
+		this.type = type;
+		cmd = 0x02;
 	}
 
 	/**

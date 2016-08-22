@@ -13,10 +13,9 @@ public class TestCmdKeyDownLoad extends TestBase{
 	private String oldKey;
 	private String newKey;
 
-	@Override
-	public void init(ArrayList arrList) {
-		this.oldKey = arrList.get(0).toString();
-		this.newKey = arrList.get(1).toString();
+	public TestCmdKeyDownLoad(String oldKey,String newKey){
+		this.oldKey = oldKey;
+		this.newKey = newKey;
 		cmd = 0x08;
 	}
 	/**

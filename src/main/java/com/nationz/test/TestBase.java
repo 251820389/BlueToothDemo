@@ -18,14 +18,12 @@ public abstract class TestBase {
 	protected boolean rspCode = true;
 	public final static String TAG = "TESTCMD";
 
-	public byte[] sendData(ArrayList arrList) {
-		init(arrList);
+	public byte[] sendData() {
 		sendData = pack();
 		Log.i(TAG,"send data = "+ HexStringUtil.byteArrayToHexstring(sendData));
 		return sendData;
 	}
 
-	public abstract void init(ArrayList arrList);
 
 	/**
 	 * if you Need to set param, should call setData()

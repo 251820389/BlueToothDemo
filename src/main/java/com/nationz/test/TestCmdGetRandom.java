@@ -10,9 +10,8 @@ import java.util.ArrayList;
 public class TestCmdGetRandom extends TestBase{
 	private int randomLen = 0;
 	
-    @Override
-    public void init(ArrayList arrList) {
-    	this.randomLen = (int)arrList.get(0);
+    public TestCmdGetRandom(int randomLen) {
+    	this.randomLen = randomLen;
     	cmd = 0x0A;
     }
 

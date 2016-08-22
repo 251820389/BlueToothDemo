@@ -19,12 +19,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
-import android.widget.LinearLayout;
 import android.widget.SimpleExpandableListAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.nationz.bean.BluetoothDevices;
+import com.nationz.bean.InjectKeyRequestBean;
 import com.nationz.bluetooth.BluetoothManagerForAPP;
 import com.nationz.nk_bluetooth.R;
 import com.nationz.test.TestBase;
@@ -43,8 +43,6 @@ import com.nationz.test.TestCmdSwitch;
 import com.nationz.test.TestUtil;
 import com.nationz.util.BluetoothLEAtrribute;
 import com.nationz.util.HexStringUtil;
-
-import junit.framework.Test;
 
 public class ContentFragment extends Fragment {
     private BluetoothDevices devF;
@@ -245,92 +243,77 @@ public class ContentFragment extends Fragment {
                         switch (position) {
                             case 0:// 握手
                                 cmdBean = new TestCmdHead();
-                                data = cmdBean.sendData(arrayList);
+                                data = cmdBean.sendData();
                                 break;
                             case 1://set args
-                                arrayList.add(name);
-                                arrayList.add(TestUtil.NAME);
-                                cmdBean = new TestCmdSetArgs();
-                                data = cmdBean.sendData(arrayList);
+                                cmdBean = new TestCmdSetArgs(name,TestUtil.NAME);
+                                data = cmdBean.sendData();
                                 break;
                             case 2:
-                                arrayList.add(MID);
-                                arrayList.add(TestUtil.MID);
-                                cmdBean = new TestCmdSetArgs();
-                                data = cmdBean.sendData(arrayList);
+                                cmdBean = new TestCmdSetArgs(MID,TestUtil.MID);
+                                data = cmdBean.sendData();
                                 break;
                             case 3:
-                                arrayList.add(TID);
-                                cmdBean = new TestCmdSetArgs();
-                                data = cmdBean.sendData(arrayList);
+                                cmdBean = new TestCmdSetArgs(TID,TestUtil.TID);
+                                data = cmdBean.sendData();
                                 break;
                             case 4:
-                                arrayList.add(TestUtil.NAME);
-                                cmdBean = new TestCmdGetArgs();
-                                data = cmdBean.sendData(arrayList);
+                                cmdBean = new TestCmdGetArgs(TestUtil.NAME);
+                                data = cmdBean.sendData();
                                 break;
                             case 5:
-                                arrayList.add(TestUtil.MID);
-                                cmdBean = new TestCmdGetArgs();
-                                data = cmdBean.sendData(arrayList);
+                                cmdBean = new TestCmdGetArgs(TestUtil.MID);
+                                data = cmdBean.sendData();
                                 break;
                             case 6:
-                                arrayList.add(TestUtil.TID);
-                                cmdBean = new TestCmdGetArgs();
-                                data = cmdBean.sendData(arrayList);
+                                cmdBean = new TestCmdGetArgs(TestUtil.TID);
+                                data = cmdBean.sendData();
                                 break;
                             case 7:
-                                arrayList.add(SN);
-                                cmdBean = new TestCmdSetSn();
-                                data = cmdBean.sendData(arrayList);
+                                cmdBean = new TestCmdSetSn(SN);
+                                data = cmdBean.sendData();
                                 break;
                             case 8:
-                                arrayList.add(8);
-                                cmdBean = new TestCmdGetRandom();
-                                data = cmdBean.sendData(arrayList);
+                                cmdBean = new TestCmdGetRandom(8);
+                                data = cmdBean.sendData();
                                 break;
                             case 9:// IC card exists
                                 cmdBean = new TestCmdIcCardExist();
-                                data = cmdBean.sendData(arrayList);
+                                data = cmdBean.sendData();
                                 break;
                             case 10://0 power on; 1 power off
-                                arrayList.add(0);
-                                cmdBean = new TestCmdIcCardpower();
-                                data = cmdBean.sendData(arrayList);
+                                cmdBean = new TestCmdIcCardpower(0);
+                                data = cmdBean.sendData();
                                 break;
                             case 11:// IC card cmd
                                 cmdBean = new TestCmdIcCard();
-                                data = cmdBean.sendData(arrayList);
+                                data = cmdBean.sendData();
                                 break;
                             case 12://注入密钥
-                                arrayList.add(1);
-                                arrayList.add(12);
-                                arrayList.add(1);
-                                arrayList.add("11111111111111111111111111111111");
-                                arrayList.add(2);
-                                arrayList.add("11111111111111111111111111111111");
-                                cmdBean = new TestCmdKeyInject();
-                                data = cmdBean.sendData(arrayList);
+                                InjectKeyRequestBean injectKeyRequestBean = new InjectKeyRequestBean();
+                                injectKeyRequestBean.setKeyId(1);
+                                injectKeyRequestBean.setDecryption_algorithm(12);
+                                injectKeyRequestBean.setDecodeKeyId(1);
+                                injectKeyRequestBean.setKeyData("11111111111111111111111111111111");
+                                injectKeyRequestBean.setKeyLrcAlgorithm(2);
+                                injectKeyRequestBean.setKeyData("11111111111111111111111111111111");
+                                cmdBean = new TestCmdKeyInject(injectKeyRequestBean);
+                                data = cmdBean.sendData();
                                 break;
                             case 13://使用密钥
-                                arrayList.add(1);
-                                arrayList.add(3);
-                                arrayList.add("11111111111111111111111111111111");
-                                cmdBean = new TestCmdKeyUse();
-                                data = cmdBean.sendData(arrayList);
+                                cmdBean = new TestCmdKeyUse(1,3,"11111111111111111111111111111111");
+                                data = cmdBean.sendData();
                                 break;
                             case 14://Set up the debug switch
-                                arrayList.add(1);//1 open  0 close
-                                cmdBean = new TestCmdSwitch();
-                                data = cmdBean.sendData(arrayList);
+                                //1 open  0 close
+                                cmdBean = new TestCmdSwitch(1);
+                                data = cmdBean.sendData();
                                 break;
                             case 15://updata system
                                 break;
                             case 16://download key
-                                arrayList.add("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
-                                arrayList.add("11111111111111111111111111111111");
-                                cmdBean = new TestCmdKeyDownLoad();
-                                data = cmdBean.sendData(arrayList);
+                                cmdBean = new TestCmdKeyDownLoad("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF","11111111111111111111111111111111");
+                                data = cmdBean.sendData();
                                 break;
                             default:
                                 Log.e(TestBase.TAG, "暂不支持此命令");

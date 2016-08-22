@@ -6,8 +6,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="unknown_service">unkunowService</string>
     <string name="unknown_characteristic">unkunowCharacteristic</string>
-    
-    
+	<string name="error_pwd_len">输入密码长度有误</string>
+	<string name="submit">确定</string>
+	<string name="cancel_trade">取消本次交易</string>
+
+
 	<string-array name="array_setting">
 	    <item>握手</item>
 	    <item>营运商名设置</item>

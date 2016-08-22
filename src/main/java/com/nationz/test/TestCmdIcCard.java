@@ -16,8 +16,7 @@ public class TestCmdIcCard extends TestBase {
 	 * ApduSend.CLA = 0; ApduSend.INS = 0xA4; ApduSend.P1 = 4; ApduSend.P2 = 0;
 	 * ApduSend.Lc = 0x80; ApduSend.Le = 0;
 	 */
-	@Override
-	public void init(ArrayList arrList) {
+	public TestCmdIcCard() {
 		cmd = 0x06;
 	}
 

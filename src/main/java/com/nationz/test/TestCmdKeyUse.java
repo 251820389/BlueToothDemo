@@ -15,11 +15,10 @@ public class TestCmdKeyUse extends TestBase {
     private int algorithm;
     private String keyData;
 
-    @Override
-    public void init(ArrayList arrList) {
-        this.keyID = (int) arrList.get(0);
-        this.algorithm = (int) arrList.get(1);
-        this.keyData = arrList.get(2).toString();
+    public TestCmdKeyUse(int keyID,int algorithm,String keyData) {
+        this.keyID = keyID;
+        this.algorithm = algorithm;
+        this.keyData = keyData;
         cmd = 0x0F;
     }
 

@@ -11,8 +11,7 @@ public class TestCmdCardHandle extends TestBase {
 
 	private int type = 0;
 
-	@Override
-	public void init(ArrayList arrList) {
+	public TestCmdCardHandle(ArrayList arrList) {
 		this.type = (int)arrList.get(0);
 		cmd = 0x05;
 	}

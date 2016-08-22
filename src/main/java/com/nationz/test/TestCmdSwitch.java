@@ -10,10 +10,10 @@ import java.util.ArrayList;
 public class TestCmdSwitch extends TestBase {
 
 	private int switch_status;
-	@Override
-	public void init(ArrayList arrList) {
+
+	public TestCmdSwitch(int switch_status) {
 		cmd = 0x10;
-		this.switch_status = (int)arrList.get(0);
+		this.switch_status = switch_status;
 	}
 
 	/**

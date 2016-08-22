@@ -25,8 +25,7 @@ public class TestCmdHead extends TestBase {
         return lrc;
     }
 
-    @Override
-    public void init(ArrayList arrList) {
+    public TestCmdHead() {
         cmd = 0x01;
     }
 

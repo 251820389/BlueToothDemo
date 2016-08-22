@@ -13,9 +13,8 @@ public class TestCmdGetArgs extends TestBase {
 	/**
 	 * set param 0:营运商名 1:商户号 2:终端号
 	 */
-	@Override
-	public void init(ArrayList arrList) {
-		this.type = (int)arrList.get(0);
+	public TestCmdGetArgs(int type) {
+		this.type = type;
 		cmd = 0x03;
 	}
 

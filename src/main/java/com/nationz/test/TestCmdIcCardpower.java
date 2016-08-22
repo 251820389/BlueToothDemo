@@ -12,9 +12,8 @@ public class TestCmdIcCardpower extends TestBase {
 
 	private int power_status = 0;
 
-	@Override
-	public void init(ArrayList arrList) {
-		this.power_status = (int)arrList.get(0);
+	public TestCmdIcCardpower(int power_statuss) {
+		this.power_status = power_statuss;
 		cmd = 0x0C;
 	}
 

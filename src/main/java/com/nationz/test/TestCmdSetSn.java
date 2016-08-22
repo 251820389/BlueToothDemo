@@ -10,9 +10,8 @@ public class TestCmdSetSn extends TestBase{
 
 	private String sn = "";
 
-	@Override
-	public void init(ArrayList arrList) {
-		this.sn = arrList.get(0).toString();
+	public TestCmdSetSn(String sn) {
+		this.sn = sn;
 		cmd = 0x09;
 	}
 

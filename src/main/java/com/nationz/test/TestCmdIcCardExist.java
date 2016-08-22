@@ -9,8 +9,7 @@ import java.util.ArrayList;
 
 public class TestCmdIcCardExist extends TestBase {
 
-	@Override
-	public void init(ArrayList arrList) {
+	public TestCmdIcCardExist() {
 		cmd = 0x0B;
 	}
 

@@ -2,6 +2,7 @@ package com.nationz.test;
 
 import android.util.Log;
 
+import com.nationz.bean.InjectKeyRequestBean;
 import com.nationz.bean.KeyInject;
 import com.nationz.bean.TestBean;
 import com.nationz.util.HexStringUtil;
@@ -18,15 +19,14 @@ public class TestCmdKeyInject extends TestBase {
     private int keyLrcAlgorithm;
     private String keyLrcData;
 
-    @Override
-    public void init(ArrayList arrList) {
-        this.keyId = (int) arrList.get(0);
-        this.decryption_algorithm = (int) arrList.get(1);
+    public TestCmdKeyInject(InjectKeyRequestBean injectKeyRequestBean) {
+        this.keyId = injectKeyRequestBean.getKeyId();
+        this.decryption_algorithm = injectKeyRequestBean.getDecryption_algorithm();
         if (decryption_algorithm != 12) {
-            this.decodeKeyId = (int) arrList.get(2);
-            this.keyData = arrList.get(3).toString();
-            this.keyLrcAlgorithm = (int) arrList.get(4);
-            this.keyLrcData = arrList.get(5).toString();
+            this.decodeKeyId = injectKeyRequestBean.getDecodeKeyId();
+            this.keyData = injectKeyRequestBean.getKeyData();
+            this.keyLrcAlgorithm = injectKeyRequestBean.getKeyLrcAlgorithm();
+            this.keyLrcData = injectKeyRequestBean.getKeyLrcData();
         }
         cmd = 0x0E;
     }
